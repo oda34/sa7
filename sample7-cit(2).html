@@ -74,18 +74,14 @@
         scene.add(Cylinder);
         
         //角柱の作成
-        var cylinderGeometry = new THREE.CylinderGeometry( 0.3, 0.5, 1, 8 );
-        //上の底面の半径、下の底面の半径、高さ、何角柱か
-        var cylinderMaterial = new THREE.MeshPhongMaterial( {color: 0x00ff00} );
-        var cylinder2 = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+        var geometry4 = new THREE.CylinderGeometry( 0.3, 0.5, 1, 8 );
+        var cylinder2 = new THREE.Mesh( geometry4, mat);
         cylinder2.position.set( -2.5, 0, 0 );
         scene.add( cylinder2 );
         
         //ドーナツの作成
-        var torusGeometry = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 ); 
-        //半径、ドーナッツの太さ、ドーナッツのチューブ方向の分割数、水平方向の分割数
-        var torusMaterial = new THREE. MeshPhongMaterial( { color: 0x00ffff} );
-        var torus = new THREE.Mesh( torusGeometry, torusMaterial );
+        var geometry5 = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 ); 
+        var torus = new THREE.Mesh( geometry5, mat );
         torus.position.set( 2.5, 0, 0);
         scene.add( torus );
 
