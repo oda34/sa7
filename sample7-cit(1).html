@@ -60,6 +60,19 @@
         var box = new THREE.Mesh(geometry, mat);
         box.position.set(0,0,0); //位置を指定
         scene.add(box);   // シーンに追加
+        
+        // 球を作成
+        var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
+        var Sphere = new THREE.Mesh(geometry2, mat);
+        Sphere.position.set(1.5,0,0);
+        scene.add(Sphere);
+        
+        //角柱の作成
+        var geometry4 = new THREE.CylinderGeometry( 0.1, 0.2, 0.25, 8);
+        var cylinder2 = new THREE.Mesh( geometry4, mat);
+        cylinder2.position.set( 1.5, 2.0, 0 );
+        scene.add( cylinder2 );
+        
 
         update();
 
@@ -72,6 +85,7 @@
            // 箱を回転させる
           box.rotation.x += 0.01;
           box.rotation.y += 0.01;
+          
 
         }
       }
